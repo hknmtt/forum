@@ -13,7 +13,7 @@ const userFixture = (id: number, role: role): UserWithoutPassword => ({
 
 const mockCreate = jest.fn();
 
-jest.mock("./users.repository.ts", () => {
+jest.mock("../users.repository.ts", () => {
   return jest.fn().mockImplementation(() => {
     return { create: mockCreate };
   });

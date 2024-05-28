@@ -13,7 +13,7 @@ const userFixture = (id: number): UserWithoutPassword => ({
 
 const mockFindOne = jest.fn();
 
-jest.mock("./users.repository.ts", () => {
+jest.mock("../users.repository.ts", () => {
   return jest.fn().mockImplementation(() => {
     return { findOne: mockFindOne };
   });

@@ -19,7 +19,7 @@ const usersFixture = [
 
 const mockFindPaginated = jest.fn();
 
-jest.mock("./users.repository", () => {
+jest.mock("../users.repository", () => {
   return jest.fn().mockImplementation(() => {
     return { findPaginated: mockFindPaginated };
   });
