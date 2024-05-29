@@ -28,7 +28,6 @@ export async function getUsers(
       skip: query.skip,
       requestingUser: req.user as UserWithoutPassword,
     });
-    console.log(req.headers.authorization);
 
     return res.send(users);
   } catch (err) {
